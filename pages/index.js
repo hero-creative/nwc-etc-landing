@@ -9,7 +9,7 @@ export default function Home() {
         <title>Employment Transformation Collective</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <header>
+      <header className="mt-[47px]">
         <div className="mx-8">
           <div className="max-w-[33%] mt-1 mb-3">
             <h2 className="bg-[#F2DB64] inline font-[400] text-xl leading-6 py-1">

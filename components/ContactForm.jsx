@@ -161,7 +161,7 @@ function ContactForm({ theme }) {
       method="POST"
       action="/success"
       data-netlify="true"
-      className="mx-8 pb-[35px] flex flex-col gap-5"
+      className="mx-8 pb-[35px] flex flex-col gap-6"
       onSubmit={handleSubmit}
     >
       <p className="mb-6 italic">Fields with asterisk (*) are required</p>
@@ -214,34 +214,36 @@ function ContactForm({ theme }) {
         {emailError.length > 0 &&
           emailError.map((error) => <AriaError message={error} />)}
       </label>
-      <fieldset className="text-lg flex flex-col gap-3">
-        <legend className="font-bold pb-[7px]">
+      <fieldset className="text-lg flex flex-col gap-3 mb-2 mt-2">
+        <legend className="font-bold pb-3">
           I&apos;m interested in (click all that apply:)
         </legend>
-        <input
-          type="checkbox"
-          className="css-checkbox"
-          name="AccessPartnerService"
-          onChange={handleChange}
-          id="acc_partner"
-        />
-        <label htmlFor="acc_partner">Accessibility Partners Service</label>
-        <input
-          className="css-checkbox"
-          type="checkbox"
-          name="customOptions"
-          onChange={handleChange}
-          id="custom_option"
-        />
-        <label htmlFor="custom_option">Customized Options</label>
-        <input
-          className="css-checkbox"
-          type="checkbox"
-          name="consultingServices"
-          onChange={handleChange}
-          id="consult_serv"
-        />
-        <label htmlFor="consult_serv">Consulting Services</label>
+        <div className="pl-4 flex flex-col gap-3">
+          <input
+            type="checkbox"
+            className="css-checkbox"
+            name="AccessPartnerService"
+            onChange={handleChange}
+            id="acc_partner"
+          />
+          <label htmlFor="acc_partner">Accessibility Partners Service</label>
+          <input
+            className="css-checkbox"
+            type="checkbox"
+            name="customOptions"
+            onChange={handleChange}
+            id="custom_option"
+          />
+          <label htmlFor="custom_option">Customized Options</label>
+          <input
+            className="css-checkbox"
+            type="checkbox"
+            name="consultingServices"
+            onChange={handleChange}
+            id="consult_serv"
+          />
+          <label htmlFor="consult_serv">Consulting Services</label>
+        </div>
       </fieldset>
       <label className={styles.inputLabel}>
         How did you learn about us?

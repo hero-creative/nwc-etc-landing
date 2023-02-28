@@ -2,7 +2,7 @@ import ContactForm from '@components/ContactForm'
 
 function Contact() {
   return (
-    <main>
+    <main className="mt-[74px]">
       <div className="mx-8">
         <h1 className="heading text-center mx-12 mb-[52px] leading-10">
           Get started by connecting with us
