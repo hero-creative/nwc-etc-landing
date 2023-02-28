@@ -1,10 +1,9 @@
-import { encode } from '../helpers/encode';
-import { useRouter } from 'next/router';
-import React, { useState } from 'react';
-
+import { encode } from '../helpers/encode'
+import { useRouter } from 'next/router'
+import React, { useState } from 'react'
 
 function ContactForm() {
-  const router = useRouter();
+  const router = useRouter()
 
   const [formState, setFormState] = useState({
     firstName: '',
@@ -12,10 +11,10 @@ function ContactForm() {
     email: '',
     referral: '',
     message: '',
-  });
+  })
 
   function handleSubmit(e) {
-    const form = e.target;
+    const form = e.target
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -30,14 +29,13 @@ function ContactForm() {
   }
 
   function handleChange(e) {
-    setFormState(prev => ({
+    setFormState((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }));
+    }))
   }
 
-
-  const { firstName, lastName, email, referral, message } = formState;
+  const { firstName, lastName, email, referral, message } = formState
 
   return (
     <form
@@ -90,21 +88,24 @@ function ContactForm() {
         <input
           type="checkbox"
           className="css-checkbox"
-          name="interest"
+          name="AccessPartnerService"
+          onChange={handleChange}
           id="acc_partner"
         />
         <label htmlFor="acc_partner">Accessibility Partners Service</label>
         <input
           className="css-checkbox"
           type="checkbox"
-          name="interest"
+          name="customOptions"
+          onChange={handleChange}
           id="custom_option"
         />
         <label htmlFor="custom_option">Customized Options</label>
         <input
           className="css-checkbox"
           type="checkbox"
-          name="interest"
+          name="consultingServices"
+          onChange={handleChange}
           id="consult_serv"
         />
         <label htmlFor="consult_serv">Consulting Services</label>
