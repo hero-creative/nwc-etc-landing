@@ -19,6 +19,10 @@ body {
     outline: none;
     @apply ring-4 ring-blue-400;
   }
+
+  .body-copy {
+    @apply text-lg leading-[25px] text-black;
+  }
   .btn-dark {
     @apply bg-theme-dark rounded-theme px-6 py-3 text-white;
   }
@@ -43,7 +47,6 @@ body {
   .btn-lg:active {
     @apply bg-gray-200;
   }
-
   .heading {
     @apply text-3xl font-[500] leading-heading text-[#0E1117];
   }
@@ -71,7 +74,6 @@ body {
     border: 0;
   }
   .css-checkbox + label {
-    @apply text-white;
     position: relative;
     cursor: pointer;
     display: inline-flex;
