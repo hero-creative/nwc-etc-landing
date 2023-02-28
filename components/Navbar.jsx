@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function Navbar() {
   return (
-    <nav className="mx-8 my-8 flex items-center justify-between">
+    <nav title="Main Navigation" aria-label='Main Navigation' className="mx-8 my-8 flex items-center justify-between">
       <Link href="/">
         <a>
           <img src="/img/nwc_logo.png" alt="Northwest Center Logo" />
