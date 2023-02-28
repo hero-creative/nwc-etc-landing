@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import ContactForm from '../components/ContactForm'
 
 export default function Home() {
   return (
@@ -103,94 +104,7 @@ export default function Home() {
             alt="Blind employee reading"
           />
           <h2 className="heading mb-[21px] mx-8 text-white">Contact Us</h2>
-          <form
-            name="contact"
-            method="POST"
-            action="/success"
-            data-netlify="true"
-            className="mx-8 pb-[35px] flex flex-col gap-5"
-          >
-            <label className="input-label">
-              First Name
-              <input
-                className="form-control"
-                type="text"
-                name="first_name"
-                id="first_name"
-              />
-            </label>
-            <label className="input-label">
-              Last Name
-              <input
-                className="form-control"
-                type="text"
-                name="last_name"
-                id="last_name"
-              />
-            </label>
-            <label className="input-label">
-              Email
-              <input
-                className="form-control"
-                type="email"
-                name="email"
-                id="email"
-              />
-            </label>
-            <fieldset className="text-lg flex flex-col gap-3">
-              <legend className="font-bold pb-[7px]">
-                I&apos;m interested in (click all that apply:)
-              </legend>
-              <input
-                type="checkbox"
-                className="css-checkbox"
-                name="interest"
-                id="acc_partner"
-              />
-              <label htmlFor="acc_partner">
-                Accessibility Partners Service
-              </label>
-              <input
-                className="css-checkbox"
-                type="checkbox"
-                name="interest"
-                id="custom_option"
-              />
-              <label htmlFor="custom_option">Customized Options</label>
-              <input
-                className="css-checkbox"
-                type="checkbox"
-                name="interest"
-                id="consult_serv"
-              />
-              <label htmlFor="consult_serv">Consulting Services</label>
-            </fieldset>
-            <label className="input-label">
-              How did you learn about us?
-              <input
-                className="form-control"
-                type="text"
-                name="referral"
-                id="referral"
-              />
-            </label>
-
-            <label className="input-label">
-              Comment/Message
-              <textarea
-                className="form-control h-full"
-                name="message"
-                id="message"
-                rows="4"
-              ></textarea>
-            </label>
-            <button
-              className="mt-5 self-center btn-lg border-none max-w-[134px]"
-              type="submit"
-            >
-              Send
-            </button>
-          </form>
+          <ContactForm />
         </div>
         <aside className="flex flex-col items-center py-[78px]">
           <h2 className="heading text-center">News &amp; Media</h2>
