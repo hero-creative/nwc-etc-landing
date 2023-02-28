@@ -1,6 +1,7 @@
 import { encode } from '../helpers/encode'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
+import AriaError from './AriaError'
 
 function ContactForm({ theme }) {
   const router = useRouter()
@@ -9,7 +10,8 @@ function ContactForm({ theme }) {
     light: {
       formControl: 'form-control bg-white border-black',
       inputLabel: 'input-label',
-      sendBtn: 'btn-lg hover:bg-gray-700 active:bg-gray-900 bg-theme-blue text-white mt-5 self-center border-none max-w-[134px]',
+      sendBtn:
+        'btn-lg hover:bg-gray-700 active:bg-gray-900 bg-theme-blue text-white mt-5 self-center border-none max-w-[134px]',
       checkbox: 'css-checkbox',
     },
     dark: {
@@ -22,6 +24,97 @@ function ContactForm({ theme }) {
 
   const styles = themeStyles[theme]
 
+  const [firstNameError, setFirstNameError] = useState([])
+  const [lastNameError, setLastNameError] = useState([])
+  const [emailError, setEmailError] = useState([])
+
+  function validateNameString(name) {
+    // Ensure name only contains letters, spaces, and hyphens
+    // and is between 2 and 128 characters long
+    const regex = /^[a-zA-Z][a-zA-Z\s\-]{0,126}[a-zA-Z]$/
+    return regex.test(name)
+  }
+
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return regex.test(email)
+  }
+
+  function validateForm() {
+    let isValid = true
+
+    if (!validateFirstNameField()) {
+      isValid = false
+    }
+
+    if (!validateLastNameField()) {
+      isValid = false
+    }
+
+    if (!validateEmailField()) {
+      isValid = false
+    }
+
+    return isValid
+  }
+
+  function validateFirstNameField() {
+    let firstNameErrors = []
+    let isValid = true
+
+    if (!validateNameString(firstName)) {
+      firstNameErrors.push(
+        'First name must contain at least 2 letters and no special characters'
+      )
+      isValid = false
+    }
+
+    if (firstName === '') {
+      firstNameErrors = []
+      isValid = true
+    }
+
+    setFirstNameError(firstNameErrors)
+    return isValid
+  }
+
+  function validateLastNameField() {
+    let lastNameErrors = []
+    let isValid = true
+
+    if (!validateNameString(lastName)) {
+      lastNameErrors.push(
+        'Last name must contain at least 2 letters and no special characters'
+      )
+      isValid = false
+    }
+
+    if (lastName === '') {
+      lastNameErrors = []
+      isValid = true
+    }
+
+    setLastNameError(lastNameErrors)
+    return isValid
+  }
+
+  function validateEmailField() {
+    let emailErrors = []
+    let isValid = true
+
+    if (!validateEmail(email)) {
+      emailErrors.push('Please enter a valid email address')
+      isValid = false
+    }
+
+    if (email === '') {
+      emailErrors = []
+      isValid = true
+    }
+
+    setEmailError(emailErrors)
+    return isValid
+  }
 
   const [formState, setFormState] = useState({
     firstName: '',
@@ -33,6 +126,13 @@ function ContactForm({ theme }) {
 
   function handleSubmit(e) {
     const form = e.target
+    const isValid = validateForm()
+
+    if (!isValid) {
+      e.preventDefault()
+      return
+    }
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -76,10 +176,14 @@ function ContactForm({ theme }) {
           name="firstName"
           id="first_name"
           value={firstName}
+          onBlur={validateFirstNameField}
           onChange={handleChange}
           required
         />
+        {firstNameError.length > 0 &&
+          firstNameError.map((error) => <AriaError message={error} />)}
       </label>
+
       <label className={styles.inputLabel}>
         Last Name*
         <input
@@ -88,9 +192,12 @@ function ContactForm({ theme }) {
           name="lastName"
           id="last_name"
           value={lastName}
+          onBlur={validateLastNameField}
           onChange={handleChange}
           required
         />
+        {lastNameError.length > 0 &&
+          lastNameError.map((error) => <AriaError message={error} />)}
       </label>
       <label className={styles.inputLabel}>
         Email*
@@ -100,9 +207,12 @@ function ContactForm({ theme }) {
           name="email"
           id="email"
           value={email}
+          onBlur={validateEmailField}
           onChange={handleChange}
           required
         />
+        {emailError.length > 0 &&
+          emailError.map((error) => <AriaError message={error} />)}
       </label>
       <fieldset className="text-lg flex flex-col gap-3">
         <legend className="font-bold pb-[7px]">
@@ -148,7 +258,7 @@ function ContactForm({ theme }) {
       <label className={styles.inputLabel}>
         Comment/Message
         <textarea
-          className={styles.formControl + " h-full"}
+          className={styles.formControl + ' h-full'}
           name="message"
           id="message"
           rows="4"
@@ -157,10 +267,7 @@ function ContactForm({ theme }) {
         ></textarea>
       </label>
 
-      <button
-        className={styles.sendBtn}
-        type="submit"
-      >
+      <button className={styles.sendBtn} type="submit">
         Send
       </button>
     </form>
