@@ -100,7 +100,7 @@ export default function Home() {
           </section>
         </div>
 
-        <aside
+        <section
           aria-label="contact us form"
           className="relative bg-theme-blue text-white pt-[126px] mt-52 lg:flex lg:flex-col lg:items-center"
         >
@@ -111,8 +111,8 @@ export default function Home() {
           />
           <h2 className="heading mb-[21px] mx-8 text-white">Contact Us</h2>
           <ContactForm theme="dark" />
-        </aside>
-        <aside
+        </section>
+        <section
           aria-label="News & Media Links"
           className="flex flex-col items-center py-[78px] lg:max-w-3xl lg:flex lg:flex-col lg:items-center lg:mx-auto"
         >
@@ -186,7 +186,7 @@ export default function Home() {
               </p>
             </li>
           </ul>
-        </aside>
+        </section>
       </main>
     </>
   )
