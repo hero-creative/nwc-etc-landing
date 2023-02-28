@@ -139,7 +139,7 @@ export default function Home() {
             </label>
             <fieldset className="text-lg flex flex-col gap-3">
               <legend className="font-bold pb-[7px]">
-                I'm interested in (click all that apply:)
+                I&apos;m interested in (click all that apply:)
               </legend>
               <input
                 type="checkbox"
@@ -214,6 +214,7 @@ export default function Home() {
           <a
             className="bg-red-200 mt-2"
             href="https://apple.com"
+            rel="noreferrer"
             target="_blank"
             title="Opens in a new window"
             aria-label="Visit the NW Center LinkedIn profile. Opens in a new window."
