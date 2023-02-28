@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import ContactForm from '../components/ContactForm'
 
 export default function Home() {
@@ -8,14 +9,6 @@ export default function Home() {
         <title>Employment Transformation Collective</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-
-      <nav className="mx-8 mt-8 mb-[47px]">
-        <img src="/img/nwc_logo.png" alt="Northwest Center Logo" />
-        <ul>
-          <li>Contact Us</li>
-        </ul>
-      </nav>
-
       <header>
         <div className="mx-8">
           <div className="max-w-[33%] mt-1 mb-3">
@@ -38,7 +31,9 @@ export default function Home() {
           src="/img/employee-in-a-wheelchair-working.png"
         />
         <div className="flex justify-center mb-24">
-          <button className="btn-lg px-[18px] py-[10px]">Contact Us</button>
+          <Link href="/contact">
+            <a className="btn-lg px-[18px] py-[10px]">Contact Us</a>
+          </Link>
         </div>
       </header>
 
@@ -60,8 +55,12 @@ export default function Home() {
                 remove digital and physical barriers.
               </p>
               <div className="flex gap-2">
-                <button className="btn-dark">Get Started</button>
-                <button className="btn-light">Learn More</button>
+                <Link href="#">
+                  <a className="btn-dark">Get Started</a>
+                </Link>
+                <Link href="/about">
+                  <a className="btn-light">Learn More</a>
+                </Link>
               </div>
             </aside>
 
@@ -104,58 +103,23 @@ export default function Home() {
             alt="Blind employee reading"
           />
           <h2 className="heading mb-[21px] mx-8 text-white">Contact Us</h2>
-          <ContactForm />
+          <ContactForm theme="dark" />
         </div>
         <aside className="flex flex-col items-center py-[78px]">
           <h2 className="heading text-center">News &amp; Media</h2>
           <ul>
             <li>
-              <a href="null">Northwest Center for Blind and Low Vision</a>
+              <a href="null">Northwest Center</a>
             </li>
             <li>
-              <a href="null">Northwest Center for Blind and Low Vision</a>
+              <a href="null">Northwest Center</a>
             </li>
             <li>
-              <a href="null">Northwest Center for Blind and Low Vision</a>
+              <a href="null">Northwest Center</a>
             </li>
           </ul>
         </aside>
       </main>
-      <footer className="text-lg leading-[26.82px] bg-theme-blue text-white p-8 pt-11 pb-14 flex flex-col gap-[52px]">
-        <div>
-          <h3 className="font-boldleading-6">Get connected</h3>
-          <p>Call Us 206-285-9140</p>
-          <a
-            className="bg-red-200 mt-2"
-            href="https://apple.com"
-            rel="noreferrer"
-            target="_blank"
-            title="Opens in a new window"
-            aria-label="Visit the NW Center LinkedIn profile. Opens in a new window."
-          >
-            <img alt="LinkedIn profile for NW Center" src="/img/linkedin.png" />
-          </a>
-        </div>
-
-        <div>
-          <h3 className="font-bold leading-6">Office</h3>
-          <p className="leading-[26.82px]">
-            1119 SW 7th Street <br />
-            Renton, WA 98057
-          </p>
-        </div>
-
-        <nav>
-          <ul className="flex flex-col gap-3">
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-            <li className="">
-              <a href="#">Accessibility Statement</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
     </>
   )
 }

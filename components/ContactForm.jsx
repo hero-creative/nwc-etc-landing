@@ -2,8 +2,26 @@ import { encode } from '../helpers/encode'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
-function ContactForm() {
+function ContactForm({ theme }) {
   const router = useRouter()
+
+  const themeStyles = {
+    light: {
+      formControl: 'form-control bg-white border-black',
+      inputLabel: 'input-label',
+      sendBtn: 'btn-lg hover:bg-gray-700 active:bg-gray-900 bg-theme-blue text-white mt-5 self-center border-none max-w-[134px]',
+      checkbox: 'css-checkbox',
+    },
+    dark: {
+      formControl: 'form-control',
+      inputLabel: 'input-label',
+      sendBtn: 'btn-lg mt-5 self-center border-none max-w-[134px]',
+      checkbox: 'css-checkbox',
+    },
+  }
+
+  const styles = themeStyles[theme]
+
 
   const [formState, setFormState] = useState({
     firstName: '',
@@ -46,39 +64,44 @@ function ContactForm() {
       className="mx-8 pb-[35px] flex flex-col gap-5"
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <p className="mb-6 italic">Fields with asterisk (*) are required</p>
 
-      <label className="input-label">
-        First Name
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="subject" value="[ETC] Form Submission" />
+      <label className={styles.inputLabel}>
+        First Name*
         <input
-          className="form-control"
+          className={styles.formControl}
           type="text"
           name="firstName"
           id="first_name"
           value={firstName}
           onChange={handleChange}
+          required
         />
       </label>
-      <label className="input-label">
-        Last Name
+      <label className={styles.inputLabel}>
+        Last Name*
         <input
-          className="form-control"
+          className={styles.formControl}
           type="text"
           name="lastName"
           id="last_name"
           value={lastName}
           onChange={handleChange}
+          required
         />
       </label>
-      <label className="input-label">
-        Email
+      <label className={styles.inputLabel}>
+        Email*
         <input
-          className="form-control"
+          className={styles.formControl}
           type="email"
           name="email"
           id="email"
           value={email}
           onChange={handleChange}
+          required
         />
       </label>
       <fieldset className="text-lg flex flex-col gap-3">
@@ -110,10 +133,10 @@ function ContactForm() {
         />
         <label htmlFor="consult_serv">Consulting Services</label>
       </fieldset>
-      <label className="input-label">
+      <label className={styles.inputLabel}>
         How did you learn about us?
         <input
-          className="form-control"
+          className={styles.formControl}
           type="text"
           name="referral"
           id="referral"
@@ -122,10 +145,10 @@ function ContactForm() {
         />
       </label>
 
-      <label className="input-label">
+      <label className={styles.inputLabel}>
         Comment/Message
         <textarea
-          className="form-control h-full"
+          className={styles.formControl + " h-full"}
           name="message"
           id="message"
           rows="4"
@@ -133,8 +156,9 @@ function ContactForm() {
           onChange={handleChange}
         ></textarea>
       </label>
+
       <button
-        className="mt-5 self-center btn-lg border-none max-w-[134px]"
+        className={styles.sendBtn}
         type="submit"
       >
         Send
