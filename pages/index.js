@@ -9,8 +9,13 @@ export default function Home() {
         <title>Employment Transformation Collective</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <header className="mt-[47px]">
-        <div className="mx-8">
+      <header className="relative mt-[47px] md:flex md:mt-[87px]">
+        <img
+          className="absolute md:relative bottom-36 md:bottom-12 h-[369px]"
+          alt="Employee in a wheelchair working at desk"
+          src="/img/employee-in-a-wheelchair-working.png"
+        />
+        <div className="mx-8 lg:max-w-lg">
           <div className="max-w-[33%] mt-1 mb-3">
             <h2 className="bg-[#F2DB64] inline font-[400] text-xl leading-6 py-1">
               Employment Transformation Collective
@@ -24,26 +29,21 @@ export default function Home() {
             accessibility. Support so all employees, disabled or not, can do
             their best work.
           </p>
-        </div>
-        <img
-          className="h-[369px]"
-          alt="Employee in a wheelchair working at desk"
-          src="/img/employee-in-a-wheelchair-working.png"
-        />
-        <div className="flex justify-center mb-24">
-          <Link href="/contact">
-            <a className="btn-lg px-[18px] py-[10px]">Contact Us</a>
-          </Link>
+          <div className="flex justify-center pt-[370px] md:pt-10 md:justify-start mb-24 z-20">
+            <Link href="/contact">
+              <a className="btn-lg px-[18px] py-[10px]">Contact Us</a>
+            </Link>
+          </div>
         </div>
       </header>
 
       <main>
-        <div className="m-8">
-          <h2 className="heading text-center mx-8 mb-10">
+        <div className="m-8 flex flex-col lg:justify-around items-center">
+          <h2 className="heading text-center mx-8 mb-10 lg:max-w-lg">
             Explore Our Services and Solutions
           </h2>
-          <section className="flex flex-col gap-16">
-            <article className="flex flex-col items-center">
+          <section className="flex flex-col gap-16 lg:margin-auto lg:max-w-3xl xl:max-w-6xl lg:flex-row lg:flex-wrap lg:justify-around lg:items-center xl:flex-nowrap">
+            <article className="flex flex-col items-center lg:w-full xl:w-[100%]">
               <div className="pb-5">
                 <img src="/img/circle.jpg" alt="" />
               </div>
@@ -64,9 +64,9 @@ export default function Home() {
               </div>
             </article>
 
-            <span className="border-b border-solid border-black block"></span>
+            <span className="lg:hidden border-b border-solid border-black block"></span>
 
-            <article className="flex flex-col items-center">
+            <article className="flex flex-col items-center lg:w-[45%] xl:w-[100%]">
               <div className="pb-5">
                 <img src="/img/circle.jpg" alt="" />
               </div>
@@ -80,9 +80,9 @@ export default function Home() {
               </Link>
             </article>
 
-            <span className="border-b border-solid border-black block"></span>
+            <span className="lg:hidden border-b border-solid border-black block"></span>
 
-            <article className="flex flex-col items-center">
+            <article className="flex flex-col items-center lg:w-[45%] xl:w-[100%]">
               <div className="pb-5">
                 <img src="/img/circle.jpg" alt="" />
               </div>
@@ -96,13 +96,13 @@ export default function Home() {
               </Link>
             </article>
 
-            <span className="border-b border-solid border-black block"></span>
+            <span className="lg:hidden border-b border-solid border-black block"></span>
           </section>
         </div>
 
         <aside
           aria-label="contact us form"
-          className="relative bg-theme-blue text-white pt-[126px] mt-52"
+          className="relative bg-theme-blue text-white pt-[126px] mt-52 lg:flex lg:flex-col lg:items-center"
         >
           <img
             className="absolute -top-[164px] right-0 h-[315px] z-50"
@@ -114,7 +114,7 @@ export default function Home() {
         </aside>
         <aside
           aria-label="News & Media Links"
-          className="flex flex-col items-center py-[78px]"
+          className="flex flex-col items-center py-[78px] lg:max-w-3xl lg:flex lg:flex-col lg:items-center lg:mx-auto"
         >
           <h2 className="heading text-center mb-7">News &amp; Media</h2>
           <ul className="mx-8 flex flex-col gap-8">
@@ -163,8 +163,8 @@ export default function Home() {
                   target="_blank"
                 >
                   <a className="border-b-[3px] border-gray-400 hover:border-none">
-                    Want a More Inclusive Workplace? Great, but Don't Overlook
-                    Disabled Individuals
+                    Want a More Inclusive Workplace? Great, but Don&apos;t
+                    Overlook Disabled Individuals
                   </a>
                 </Link>
               </p>

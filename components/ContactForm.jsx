@@ -31,7 +31,7 @@ function ContactForm({ theme }) {
   function validateNameString(name) {
     // Ensure name only contains letters, spaces, and hyphens
     // and is between 2 and 128 characters long
-    const regex = /^[a-zA-Z][a-zA-Z\s\-]{0,126}[a-zA-Z]$/
+    const regex = /^[a-zA-Z][a-zA-Z\s-]{0,126}[a-zA-Z]$/
     return regex.test(name)
   }
 
@@ -161,10 +161,12 @@ function ContactForm({ theme }) {
       method="POST"
       action="/success"
       data-netlify="true"
-      className="mx-8 pb-[35px] flex flex-col gap-6"
+      className="mx-8 pb-[35px] flex flex-col gap-6 lg:w-full lg:max-w-lg"
       onSubmit={handleSubmit}
     >
-      <p className="mb-6 italic">Fields with asterisk (*) are required</p>
+      <p className="mb-6 italic lg:text-center">
+        Fields with asterisk (*) are required
+      </p>
 
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="subject" value="[ETC] Form Submission" />
@@ -181,7 +183,9 @@ function ContactForm({ theme }) {
           required
         />
         {firstNameError.length > 0 &&
-          firstNameError.map((error) => <AriaError message={error} />)}
+          firstNameError.map((error, index) => (
+            <AriaError key={index} message={error} />
+          ))}
       </label>
 
       <label className={styles.inputLabel}>
@@ -197,7 +201,9 @@ function ContactForm({ theme }) {
           required
         />
         {lastNameError.length > 0 &&
-          lastNameError.map((error) => <AriaError message={error} />)}
+          lastNameError.map((error, index) => (
+            <AriaError key={index} message={error} />
+          ))}
       </label>
       <label className={styles.inputLabel}>
         Email*
@@ -212,7 +218,9 @@ function ContactForm({ theme }) {
           required
         />
         {emailError.length > 0 &&
-          emailError.map((error) => <AriaError message={error} />)}
+          emailError.map((error, index) => (
+            <AriaError key={index} message={error} />
+          ))}
       </label>
       <fieldset className="text-lg flex flex-col gap-3 mb-2 mt-2">
         <legend className="font-bold pb-3">

@@ -4,9 +4,11 @@ import Footer from './Footer'
 function Layout({ children }) {
   return (
     <>
-      <Navbar />
-      {children}
-      <Footer />
+      <div className="flex flex-col justify-start min-h-screen">
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
     </>
   )
 }

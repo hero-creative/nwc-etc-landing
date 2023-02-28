@@ -6,7 +6,7 @@ function AccessStatement() {
       <Head>
         <title>Accessibility Statement</title>
       </Head>
-      <main className="mt-[74px] mx-8 flex flex-col gap-[73px] mb-[57px]">
+      <main className="mt-[74px] mx-8 flex flex-col gap-[73px] mb-[57px] lg:max-w-4xl lg:mx-auto">
         <div>
           <h1 className="font-[500] text-[25px] leading-[35px] mb-[10px]">
             Employment Transformation Collective Accessibility Statement

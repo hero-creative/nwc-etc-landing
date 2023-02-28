@@ -8,9 +8,11 @@ import { IoWarning } from 'react-icons/io5'
  */
 function AriaError({ message }) {
   return (
-    <div className='flex gap-2 items-center mt-2' id="error">
+    <div className="flex gap-2 items-center mt-2" id="error">
       <IoWarning fontSize={28} />
-      <span role="alert" className="text-red-500">{message}</span>
+      <span role="alert" className="text-red-500">
+        {message}
+      </span>
     </div>
   )
 }
