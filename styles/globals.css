@@ -6,10 +6,109 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Add your custom styles below */
+@layer components {
+  *:focus {
+    outline: none;
+    @apply ring-4 ring-blue-400;
+  }
+  .btn-dark {
+    @apply bg-theme-dark rounded-theme px-6 py-3 text-white;
+  }
+
+  .btn-dark:hover,
+  .btn-dark:active {
+    @apply bg-gray-700;
+  }
+  .btn-light {
+    @apply bg-white rounded-theme border border-black border-solid px-6 py-3 text-black;
+  }
+
+  .btn-light:hover,
+  .btn-light:active {
+    @apply bg-gray-200;
+  }
+
+  .btn-lg {
+    @apply text-xl bg-white rounded-theme border border-black border-solid px-6 py-3 text-[#0E1117];
+  }
+  .btn-lg:hover,
+  .btn-lg:active {
+    @apply bg-gray-200;
+  }
+
+  .heading {
+    @apply text-3xl font-[500] leading-heading text-[#0E1117];
+  }
+
+  .subheading {
+    @apply text-2xl font-[500] leading-6 text-black;
+  }
+
+  .form-control {
+    @apply border border-white px-2 py-1 w-full bg-theme-blue h-[47px];
+  }
+
+  .input-label {
+    @apply flex flex-col gap-[5px] leading-6;
+  }
+
+  .css-checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  .css-checkbox + label {
+    @apply text-white;
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    height: 27px;
+  }
+  .css-checkbox + label::before {
+    @apply bg-theme-blue border-white;
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+    width: 17px;
+    height: 17px;
+    border-width: 1px;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+  .css-checkbox:checked + label::after {
+    content: ' ';
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTczLjg5OCA0MzkuNDA0bC0xNjYuNC0xNjYuNGMtOS45OTctOS45OTctOS45OTctMjYuMjA2IDAtMzYuMjA0bDM2LjIwMy0zNi4yMDRjOS45OTctOS45OTggMjYuMjA3LTkuOTk4IDM2LjIwNCAwTDE5MiAzMTIuNjkgNDMyLjA5NSA3Mi41OTZjOS45OTctOS45OTcgMjYuMjA3LTkuOTk3IDM2LjIwNCAwbDM2LjIwMyAzNi4yMDRjOS45OTcgOS45OTcgOS45OTcgMjYuMjA2IDAgMzYuMjA0bC0yOTQuNCAyOTQuNDAxYy05Ljk5OCA5Ljk5Ny0yNi4yMDcgOS45OTctMzYuMjA0LS4wMDF6Ii8+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    left: 3px;
+    top: 3px;
+    text-align: center;
+    background-color: transparent;
+    height: 17px;
+    width: 17px;
+  }
+  .css-checkbox:focus + label::before {
+    @apply ring-2 ring-blue-300;
+  }
 }
