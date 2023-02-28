@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from 'next/link'
 
 function Footer() {
   return (
@@ -42,7 +42,6 @@ function Footer() {
         </ul>
       </nav>
     </footer>
-
   )
 }
 

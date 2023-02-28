@@ -111,6 +111,6 @@ body {
     width: 17px;
   }
   .css-checkbox:focus + label::before {
-    @apply ring-2 ring-blue-300;
+    @apply ring-4 ring-blue-400;
   }
 }
