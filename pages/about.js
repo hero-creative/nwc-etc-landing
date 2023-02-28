@@ -1,4 +1,5 @@
 import ContactForm from '@components/ContactForm'
+import Head from 'next/head'
 import Link from 'next/link'
 
 function About() {
@@ -42,6 +43,9 @@ function About() {
 
   return (
     <>
+      <Head>
+        <title>Accessibility Partners Service</title>
+      </Head>
       <header className="relative bg-theme-blue pt-14">
         <h1 className="heading text-white mx-14 mb-6">
           Accessibility Partners Service
@@ -66,11 +70,11 @@ function About() {
         />
       </header>
       <main className="mt-32">
-        <div className="mx-8 flex flex-col gap-[54px]">
+        <section className="mx-8 flex flex-col gap-[54px]">
           {content.map(function (item, index) {
             const desc = item.description.split('\n\n')
             return (
-              <div key={index} className="flex flex-col gap-[14px]">
+              <article key={index} className="flex flex-col gap-[14px]">
                 <div>
                   <img src={item.imgSrc} alt={item.imgAlt} />
                 </div>
@@ -82,15 +86,18 @@ function About() {
                     </p>
                   )
                 })}
-              </div>
+              </article>
             )
           })}
-        </div>
-        <div className="bg-theme-blue text-white pt-[38px] mt-[60px]">
+        </section>
+        <section
+          aria-label="contact us form"
+          className="bg-theme-blue text-white pt-[38px] mt-[60px]"
+        >
           <h2 className="heading mb-[21px] mx-8 text-white">Contact Us</h2>
           <ContactForm theme="dark" />
-        </div>
-        <aside className="mb-[52px] mt-[31px]">
+        </section>
+        <section className="mb-[52px] mt-[31px]">
           <div className="w-[234px]">
             <img
               src="/img/nora-genster.jpg"
@@ -124,7 +131,7 @@ function About() {
               </a>
             </Link>
           </div>
-        </aside>
+        </section>
       </main>
     </>
   )

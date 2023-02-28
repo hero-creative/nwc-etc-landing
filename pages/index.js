@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className="heading mb-3">
             Building and Supporting Truly Inclusive Workplaces and Businesses
           </h1>
-          <p className="leading-6 mb-4">
+          <p className="leading-6 mb-[3px]">
             Services and solutions that remove workplace barriers to
             accessibility. Support so all employees, disabled or not, can do
             their best work.
@@ -42,8 +42,8 @@ export default function Home() {
           <h2 className="heading text-center mx-8 mb-10">
             Explore Our Services and Solutions
           </h2>
-          <div className="flex flex-col gap-16">
-            <aside className="flex flex-col items-center">
+          <section className="flex flex-col gap-16">
+            <article className="flex flex-col items-center">
               <div className="pb-5">
                 <img src="/img/circle.jpg" alt="" />
               </div>
@@ -55,18 +55,18 @@ export default function Home() {
                 remove digital and physical barriers.
               </p>
               <div className="flex gap-2">
-                <Link href="#">
+                <Link href="/contact">
                   <a className="btn-dark">Get Started</a>
                 </Link>
                 <Link href="/about">
                   <a className="btn-light">Learn More</a>
                 </Link>
               </div>
-            </aside>
+            </article>
 
             <span className="border-b border-solid border-black block"></span>
 
-            <aside className="flex flex-col items-center">
+            <article className="flex flex-col items-center">
               <div className="pb-5">
                 <img src="/img/circle.jpg" alt="" />
               </div>
@@ -75,12 +75,14 @@ export default function Home() {
                 Providing disabled employees with the tools they need to
                 succeed.
               </p>
-              <button className="btn-dark">Get Started</button>
-            </aside>
+              <Link href="/contact">
+                <a className="btn-dark">Get Started</a>
+              </Link>
+            </article>
 
             <span className="border-b border-solid border-black block"></span>
 
-            <aside className="flex flex-col items-center">
+            <article className="flex flex-col items-center">
               <div className="pb-5">
                 <img src="/img/circle.jpg" alt="" />
               </div>
@@ -89,33 +91,99 @@ export default function Home() {
                 Leading the way to inclusion by developing a culture of
                 accommodation.
               </p>
-              <button className="btn-dark">Get Started</button>
-            </aside>
+              <Link href="/contact">
+                <a className="btn-dark">Get Started</a>
+              </Link>
+            </article>
 
             <span className="border-b border-solid border-black block"></span>
-          </div>
+          </section>
         </div>
 
-        <div className="relative bg-theme-blue text-white pt-[126px] mt-52">
+        <aside
+          aria-label="contact us form"
+          className="relative bg-theme-blue text-white pt-[126px] mt-52"
+        >
           <img
-            className="absolute -top-[47%] translate-y-[100%] right-0 h-[315px] z-50"
+            className="absolute -top-[164px] right-0 h-[315px] z-50"
             src="/img/blind-employee-reading.png"
             alt="Blind employee reading"
           />
           <h2 className="heading mb-[21px] mx-8 text-white">Contact Us</h2>
           <ContactForm theme="dark" />
-        </div>
-        <aside className="flex flex-col items-center py-[78px]">
-          <h2 className="heading text-center">News &amp; Media</h2>
-          <ul>
-            <li>
-              <a href="null">Northwest Center</a>
+        </aside>
+        <aside
+          aria-label="News & Media Links"
+          className="flex flex-col items-center py-[78px]"
+        >
+          <h2 className="heading text-center mb-7">News &amp; Media</h2>
+          <ul className="mx-8 flex flex-col gap-8">
+            <li className="flex gap-4 items-center">
+              <div className="flex-shrink-0 w-[78px] flex items-center justify-center">
+                <img src="/img/kirologo.png" alt="Kiro7 News Logo" />
+              </div>
+              <p>
+                <Link
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.kiro7.com/news/local/local-woman-shares-experiences-navigating-workforce-wheelchair-helps-others-understand-ableism/ALEB46BXVNGSVMKPKOX4RZX2BE/"
+                >
+                  <a className="border-b-[3px] border-gray-400 hover:border-none">
+                    Local woman shares experiences navigating workforce in
+                    wheelchair, helps others understand &apos;ableism&apos;
+                  </a>
+                </Link>
+              </p>
             </li>
-            <li>
-              <a href="null">Northwest Center</a>
+            <li className="flex gap-4 items-center">
+              <div className="flex-shrink-0 w-[78px] flex items-center justify-center">
+                <img src="/img/usatodaylogo.png" alt="USA Today Logo" />
+              </div>
+              <p>
+                <Link
+                  href="https://www.usatoday.com/story/opinion/2022/11/22/american-job-market-needs-people-disabilities/8304760001/?https://opinion.usatoday.com"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <a className="border-b-[3px] border-gray-400 hover:border-none">
+                    A reality check on the American workforce: Time to invest in
+                    people with disabilities
+                  </a>
+                </Link>
+              </p>
             </li>
-            <li>
-              <a href="null">Northwest Center</a>
+            <li className="flex gap-4 items-center">
+              <div className="flex-shrink-0 w-[78px] flex items-center justify-center">
+                <img src="/img/inclogo.png" alt="Inc. Logo" />
+              </div>
+              <p>
+                <Link
+                  href="https://www.inc.com/marcel-schwantes/5-ways-to-make-your-workplace-more-inclusive-for-what-is-now-largest-minority-population.html"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <a className="border-b-[3px] border-gray-400 hover:border-none">
+                    Want a More Inclusive Workplace? Great, but Don't Overlook
+                    Disabled Individuals
+                  </a>
+                </Link>
+              </p>
+            </li>
+            <li className="flex gap-4 items-center">
+              <div className="flex-shrink-0 w-[78px] flex items-center justify-center">
+                <img src="/img/nytlogo.png" alt="New York Times Logo" />
+              </div>
+              <p>
+                <Link
+                  href="https://www.nytimes.com/2022/10/25/business/economy/labor-disabilities.html"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <a className="border-b-[3px] border-gray-400 hover:border-none">
+                    For Disabled Workers, a Tight Labor Market Opens New Doors
+                  </a>
+                </Link>
+              </p>
             </li>
           </ul>
         </aside>

@@ -33,6 +33,11 @@ function Footer() {
               <a className="hover:underline">Contact Us</a>
             </Link>
           </li>
+          <li>
+            <Link href="/about">
+              <a className="hover:underline">Accessibility Partners Service</a>
+            </Link>
+          </li>
           <li className="">
             <Link href="/accessibility-statement">
               <a className="hover:underline">Accessibility Statement</a>
