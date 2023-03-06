@@ -73,57 +73,71 @@ function About() {
       <Head>
         <title>Accessibility Partners Service</title>
       </Head>
-      <header className="relative bg-theme-blue pt-14">
-        <div className="lg:flex lg:flex-col lg:items-start lg:mx-auto max-w-7xl">
-          <h1 className="heading text-white mx-14 mb-6 lg:text-left lg:mx-0">
-            Accessibility Partners Service
-          </h1>
-          <div className="mx-14 flex flex-col gap-6 lg:mx-0 lg:max-w-xl">
-            <p className="body-copy text-white">
-              Building and Supporting Truly Inclusive Workplaces and Businesses
-            </p>
-            <p className="body-copy text-white">
-              Accessibility solutions for blind and low-vision employees
-            </p>
-            <p className="body-copy text-white pb-28">
-              We support employees your way, using your technology and internal
-              systems. By providing remote and virtual services over your secure
-              video networks, for example, we keep services confidential and
-              secure
-            </p>
+      <header className="relative bg-theme-blue pt-[49px] overflow-x-clip lg:pt-[102px]">
+        <div className="max-w-6xl lg:flex lg:justify-between lg:items-center xl:mx-auto ">
+          <div className="lg:flex lg:flex-col lg:items-start ">
+            <h1 className="heading inter text-white lg:text-left mx-8">
+              Accessibility Partners Service
+            </h1>
+            <div className="flex flex-col gap-5 mt-[22px] mx-8 lg:max-w-xl">
+              <p className="text-[22px] leading-[33px] mb-[20px] text-white">
+                Building and Supporting Truly Inclusive Workplaces and
+                Businesses
+              </p>
+              <p className="body-copy text-white">
+                Accessibility solutions for blind and low-vision employees
+              </p>
+              <p className="body-copy text-white pb-28">
+                We support employees your way, using your technology and
+                internal systems. By providing remote and virtual services over
+                your secure video networks, for example, we keep services
+                confidential and secure
+              </p>
+            </div>
+          </div>
+          <div className="partner-image-mobile lg:partner-image-desktop lg:top-[61px]">
+            <img
+              className="h-full"
+              src="/img/partner-translating@4x.png"
+              alt="A Partner translating matertial into an accessible format for an employee"
+            />
           </div>
         </div>
-        <img
-          src="/img/partner-translating@4x.png"
-          alt="A Partner translating matertial into an accessible format for an employee"
-          className="absolute -bottom-[150px] -right-[30px] h-[251px]"
-        />
       </header>
       <main className="mt-32">
-        <section className="mx-8 flex flex-col gap-[54px] lg:gap-[84px] lg:flex-row lg:flex-wrap lg:mb-36 xl:max-w-7xl lg:flex 2xl:mx-auto lg:items-center">
-          {content.map(function (item, index) {
-            return (
-              <article
-                key={index}
-                className="flex flex-col gap-[14px] lg:w-1/4"
-              >
-                <div>
-                  <img src={item.imgSrc} alt={item.imgAlt} />
-                </div>
-                <h2 className="subheading">{item.title}</h2>
-                {item.description()}
-              </article>
-            )
-          })}
-        </section>
+        <div className="max-w-6xl xl:mx-auto">
+          <section className="mx-8 flex flex-col gap-[54px] lg:gap-[84px] lg:flex-row lg:flex-wrap lg:mb-36 lg:flex 2xl:mx-auto lg:items-center">
+            {content.map(function (item, index, arr) {
+              return (
+                <article
+                  key={index}
+                  className="flex flex-col gap-[14px] lg:w-1/4 lg:self-start"
+                >
+                  <div>
+                    <img src={item.imgSrc} alt={item.imgAlt} />
+                  </div>
+                  <h2 className="subheading">{item.title}</h2>
+
+                  {item.description()}
+
+                  {index !== arr.length - 1 && (
+                    <span className="lg:hidden border-b border-solid border-black block pt-8"></span>
+                  )}
+                </article>
+              )
+            })}
+          </section>
+        </div>
         <section
           aria-label="contact us form"
           className="bg-theme-blue text-white pt-[38px] mt-[60px] lg:flex lg:flex-col lg:items-center"
         >
-          <h2 className="heading mb-[21px] mx-8 text-white">Contact Us</h2>
+          <h2 className="subheading font-[600] leading-[30px] mb-[21px] mx-8 text-white">
+            Contact Us
+          </h2>
           <ContactForm theme="dark" />
         </section>
-        <section className="mb-[52px] mt-[31px] sm:flex sm:flex-row sm:justify-center lg:max-w-7xl lg:mx-auto">
+        <section className="mb-[84px] mt-[69px] sm:flex sm:flex-row sm:justify-center lg:max-w-6xl lg:mx-auto">
           <div className="w-[234px]">
             <img
               src="/img/nora-genster.jpg"
@@ -132,9 +146,9 @@ function About() {
               title="Nora Genster"
             />
           </div>
-          <div className="mx-8 mt-[34px] sm:w-1/2 flex flex-col gap-3">
+          <div className="mx-9 mt-[19px] sm:w-1/2 flex flex-col">
             <h2 className="subheading">Meet Nora Genster</h2>
-            <p className="body-copy max-w-2xl">
+            <p className="body-copy max-w-2xl mt-[12px] mb-[22px]">
               Nora Genster is Senior Director of the Employment Transformation
               Collective at Northwest Center. She joined Northwest Center in
               2022. Nora oversees a portfolio that creates workplaces where all

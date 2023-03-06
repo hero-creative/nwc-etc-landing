@@ -13,14 +13,14 @@ function ContactForm({ theme }) {
       notice: 'italic text-center',
       inputLabel: 'input-label',
       sendBtn:
-        'btn-lg hover:bg-gray-700 active:bg-gray-900 bg-theme-blue text-white mt-5 border-none max-w-[134px]',
+        'mb-[63px] btn-lg hover:bg-gray-700 active:bg-gray-900 bg-theme-blue text-white mt-5 border-none max-w-[134px]',
     },
     dark: {
       checkbox: 'css-checkbox',
       formControl: 'form-control',
       notice: 'italic',
       inputLabel: 'input-label',
-      sendBtn: 'btn-lg mt-5 border-none max-w-[134px]',
+      sendBtn: 'mb-[43px] btn-lg mt-5 border-none max-w-[134px]',
     },
   }
 
@@ -163,7 +163,7 @@ function ContactForm({ theme }) {
       method="POST"
       action="/success"
       data-netlify="true"
-      className="mx-8 pb-[35px] flex flex-col gap-6 lg:w-full lg:max-w-lg"
+      className="mx-8 flex flex-col gap-6 lg:w-full lg:max-w-lg"
       onSubmit={handleSubmit}
     >
       <p className={styles.notice}>Fields with asterisk (*) are required</p>

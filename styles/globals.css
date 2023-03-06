@@ -6,7 +6,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Roboto, sans-serif;
+}
+
+.inter {
+  font-family: Inter, sans-serif;
 }
 
 * {
@@ -21,7 +25,7 @@ body {
   }
 
   .body-copy {
-    @apply text-lg leading-[25px] text-black;
+    @apply leading-[24px] text-black;
   }
   .btn-dark {
     @apply bg-theme-dark rounded-theme px-6 py-3 text-white;
@@ -41,14 +45,15 @@ body {
   }
 
   .btn-lg {
-    @apply text-xl bg-white rounded-theme border border-black border-solid px-6 py-3 text-[#0E1117];
+    @apply text-xl bg-white rounded-theme border-[3px] border-black border-solid px-6 py-3 text-[#0E1117];
   }
   .btn-lg:hover,
   .btn-lg:active {
     @apply bg-gray-200;
   }
   .heading {
-    @apply text-3xl font-[500] leading-heading text-[#0E1117];
+    font-family: Inter, sans-serif;
+    @apply text-3xl font-[600] leading-heading text-[#0E1117];
   }
 
   .subheading {
@@ -61,6 +66,17 @@ body {
 
   .input-label {
     @apply flex flex-col gap-[5px] leading-6;
+  }
+
+  .partner-image-mobile {
+    @apply -bottom-[170px] -right-[35px] h-[279px];
+    position: absolute;
+  }
+  .partner-image-desktop {
+    @apply h-[400px];
+    position: relative;
+    bottom: unset;
+    right: unset;
   }
 
   .css-checkbox {

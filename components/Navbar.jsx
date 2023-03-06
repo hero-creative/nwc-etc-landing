@@ -5,11 +5,11 @@ function Navbar() {
     <nav
       title="Main Navigation"
       aria-label="Main Navigation"
-      className="mx-8 my-8 flex items-center justify-between"
+      className="bg-white p-8 xl:px-0 flex items-center justify-between lg:max-w-7xl lg:mx-auto w-full"
     >
       <Link href="/">
-        <a>
-          <img src="/img/nwc_logo.png" alt="Northwest Center Logo" />
+        <a className="max-w-[129px] lg:max-w-[225px]">
+          <img src="/img/nwc-logo-@4x.png" alt="Northwest Center Logo" />
         </a>
       </Link>
       <ul>
