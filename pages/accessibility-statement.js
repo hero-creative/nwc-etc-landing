@@ -12,39 +12,30 @@ function AccessStatement() {
             Employment Transformation Collective Accessibility Statement
           </h1>
           <p className="body-copy">
-            Employment Transformation Collective, as part of Northwest Center,
-            strives to ensure that its services and platforms are accessible to
-            everyone. We are investing time and resources to help ensure that
-            our website is made easier to use and more accessible for persons
-            with disabilities. The belief is integral to our mission of
-            disability inclusion that all experiences and interactions, such as
-            a website, should be accessible and benefit all users and that every
-            person has the right to live with dignity, equity, comfort, and
-            independence based on their needs.
+            The Employment Transformation Collective (ETC), part of Northwest
+            Center, strives to ensure that its services and platforms are
+            accessible to everyone. We invest time and resources to help ensure
+            our website is easier to use and more accessible for persons with
+            disabilities. This belief is integral to our mission of disability
+            inclusion: All experiences and interactions, such as websites,
+            should be accessible to and benefit all users. Every person has the
+            right to live with dignity, equity, comfort, and independence based
+            on their needs. On [www.Placeholder.com] we strive for WCAG 2.1 AA
+            compliance as we work on ongoing design and back-end accessibility
+            best-practice applications.
           </p>
         </div>
-        <div>
-          <h1 className="font-[500] text-[25px] leading-[35px] mb-[10px]">
-            Accessibility on [[[www.Placeholder.com]]]
-          </h1>
-          <p className="body-copy">
-            www.Placeholder.com strives for WCAG 2.1 AA compliance as we working
-            through ongoing design and backend accessibility best practice
-            applications.
-          </p>
-        </div>
-
         <div>
           <h1 className="font-[500] text-[25px] leading-[35px] mb-[10px]">
             Disclaimer
           </h1>
           <p className="body-copy">
-            Employment Transformation Collective continues its ongoing efforts
-            to improve the accessibility of its site and services. Across all
-            our services, programs, businesses, and platforms we strive to see
-            through our mission of disability inclusion, creating experiences
-            that are accessible to people of all abilities, so everyone can feel
-            welcomed and respected.
+            The Employment Transformation Collective continues its ongoing
+            efforts to improve the accessibility of its sites and services.
+            Across all our services, programs, businesses, and platforms, we
+            strive to follow our mission of disability inclusion, creating
+            experiences that are accessible to people of all abilities, so
+            everyone can feel welcomed and respected.
           </p>
         </div>
         <div>
@@ -53,8 +44,8 @@ function AccessStatement() {
           </h1>
           <p className="body-copy">
             If you wish to report an accessibility issue on our site, have any
-            questions or need assistance, please contact us at: Email:
-            accessibility@nwcenter.org
+            questions, or need assistance, please contact us at, Email:
+            WebAccessibility@nwcenter.org
           </p>
         </div>
       </main>

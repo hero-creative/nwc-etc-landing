@@ -11,9 +11,9 @@ export default function Home() {
       </Head>
       <header className="relative mt-[47px] md:flex md:mt-[87px]">
         <img
-          className="absolute md:relative bottom-36 md:bottom-12 h-[369px]"
-          alt="Employee in a wheelchair working at desk"
-          src="/img/employee-in-a-wheelchair-working.png"
+          className="absolute md:relative bottom-36 -left-[86px] md:bottom-12 h-[369px]"
+          alt="A smiling woman using a wheelchair and holding a tablet"
+          src="/img/woman-holding-a-tablet@4x.png"
         />
         <div className="mx-8 lg:max-w-lg">
           <div className="max-w-[33%] mt-1 mb-3">
@@ -22,12 +22,13 @@ export default function Home() {
             </h2>
           </div>
           <h1 className="heading mb-3">
-            Building and Supporting Truly Inclusive Workplaces and Businesses
+            We Work with You to Build and Support Truly Inclusive Workplaces and
+            Businesses
           </h1>
           <p className="leading-6 mb-[3px]">
-            Services and solutions that remove workplace barriers to
-            accessibility. Support so all employees, disabled or not, can do
-            their best work.
+            We offer services, solutions, and support that remove workplace
+            barriers to accessibility, so all employees, with and without
+            disabilities, can do their best work.
           </p>
           <div className="flex justify-center pt-[370px] md:pt-10 md:justify-start mb-24 z-20">
             <Link href="/contact">
@@ -45,14 +46,21 @@ export default function Home() {
           <section className="flex flex-col gap-16 lg:margin-auto lg:max-w-3xl xl:max-w-6xl lg:flex-row lg:flex-wrap lg:justify-around lg:items-center xl:flex-nowrap">
             <article className="flex flex-col items-center lg:w-full xl:w-[100%]">
               <div className="pb-5">
-                <img src="/img/circle.jpg" alt="" />
+                <img
+                  src="/img/home/impaired-eye.png"
+                  alt="Visually impaired eye icon"
+                />
               </div>
               <h3 className="subheading pb-2">
                 Accessibility Partners Service
               </h3>
               <p className="text-lg leading-5 mb-8 text-center">
-                Connecting blind and low-vision employees with partners to
-                remove digital and physical barriers.
+                We provide blind and low-vision employees with one-to-one
+                support in the workplace. Our services remove digital and
+                physical barriers to make meetings, events, data, and documents
+                more accessible for low-vision and blind employees. All
+                employees can use our Help Desk to make documents, events, and
+                other work more accessible.
               </p>
               <div className="flex gap-2">
                 <Link href="/contact">
@@ -68,12 +76,18 @@ export default function Home() {
 
             <article className="flex flex-col items-center lg:w-[45%] xl:w-[100%]">
               <div className="pb-5">
-                <img src="/img/circle.jpg" alt="" />
+                <img
+                  src="/img/home/person-chatting.png"
+                  alt="Person chatting icon"
+                />
               </div>
-              <h3 className="subheading pb-2">Customized Options</h3>
+              <h3 className="subheading pb-2">
+                Training & Consulting Services
+              </h3>
               <p className="text-lg leading-5 mb-8 text-center">
-                Providing disabled employees with the tools they need to
-                succeed.
+                We work with businesses to develop cultures of accommodation,
+                training managers and executives to create inclusive workplaces
+                for people with and without disabilities.
               </p>
               <Link href="/contact">
                 <a className="btn-dark">Get Started</a>
@@ -84,12 +98,17 @@ export default function Home() {
 
             <article className="flex flex-col items-center lg:w-[45%] xl:w-[100%]">
               <div className="pb-5">
-                <img src="/img/circle.jpg" alt="" />
+                <img
+                  src="img/home/hand-gear.png"
+                  alt="hand holding a gear symbol icon"
+                />
               </div>
-              <h3 className="subheading pb-2">Consulting Services</h3>
+              <h3 className="subheading pb-2">Customized Options</h3>
               <p className="text-lg leading-5 mb-8 text-center">
-                Leading the way to inclusion by developing a culture of
-                accommodation.
+                We work with disabled employees and with employers to customize
+                solutions. Disabled employees get the tools they need to succeed
+                and employers the support to create inclusive and accessible
+                workplaces.
               </p>
               <Link href="/contact">
                 <a className="btn-dark">Get Started</a>
@@ -106,8 +125,8 @@ export default function Home() {
         >
           <img
             className="absolute -top-[164px] right-0 h-[315px] z-50"
-            src="/img/blind-employee-reading.png"
-            alt="Blind employee reading"
+            src="/img/blind-employee-reading@4x.png"
+            alt="A seated employee reading Braille"
           />
           <h2 className="heading mb-[21px] mx-8 text-white">Contact Us</h2>
           <ContactForm theme="dark" />

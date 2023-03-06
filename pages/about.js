@@ -6,37 +6,64 @@ function About() {
   const content = [
     {
       title: 'Visual Assistance Help Desk',
-      description:
-        'Accessibility Partners are trusted specialists for blind and low-vision employees. We solve accessibility issues over secure video within your network.',
-      imgSrc: '/img/circle-sm.png',
-      imgAlt: '',
-    },
-    {
-      title: 'Accessible Groups',
-      description:
-        'All employees can use the Help Desk to make documents and events more accessible. Supplements accessibility efforts by supporting visually impaired employees more efficiently.',
-      imgSrc: '/img/circle-sm.png',
-      imgAlt: '',
+      description: () => (
+        <>
+          <p>
+            Our partners are experts in accessibility, trained to meet the
+            diversified needs of blind, low-vision, and other employees who need
+            visual assistance.
+          </p>
+          Today, many documents are not accessible. All your employees and teams
+          can use our Help Desk to make their documents, events, and other work
+          more accessible. The Help Desk, for example, can provide sighted-guide
+          services at events and convert presentations to accessible formats.
+          <Link href="/contact">
+            <a className="underline hover:no-underline text-[#0016DB]">
+              Contact us to schedule a demo &gt;
+            </a>
+          </Link>
+        </>
+      ),
+      imgSrc: '/img/about/eye-headset.png',
+      imgAlt: 'eye and headset icon',
     },
     {
       title: 'Visual Experience Support',
-      description:
-        'Accessibility Partners are experts in visual interpretation for real-time meetings and live events. \n\nWe also provide sighted guide services for end-to-end accessibility.',
-      imgSrc: '/img/circle-sm.png',
+      description: () => (
+        <p>
+          Accessibility Partners are experts in real-time visual interpretation.
+          This means they provide customized support that interprets visual
+          information at events and meetings as they happen, converting them to
+          accessible formats. For example, they can provide audio descriptions
+          of visual presentations.
+        </p>
+      ),
+      imgSrc: '/img/about/eye-over-hand.png',
       imgAlt: '',
     },
     {
       title: 'Managed Full-Time Staff',
-      description:
-        'Employees who need one-to-one visual accessibility support: We provide personalized full-time assistance, with workplace accommodation plans. \n\nWe offer in-person, remote, and hybrid support.',
-      imgSrc: '/img/circle-sm.png',
+      description: () => (
+        <p>
+          For employees who need one-to-one visual accessibility support, we
+          provide personalized full-time assistance, with workplace
+          accommodation plans. We offer in-person, remote, and hybrid support.
+        </p>
+      ),
+      imgSrc: '/img/about/person-tracking-clock.png',
       imgAlt: '',
     },
     {
       title: 'Dynamic Solutions',
-      description:
-        'Our Accessibility Partners provide customized support that adjusts to meet your changing needs. We support the best existing and new ways communicate visual information. This ranges from interpreting complex data to integrating assistive technologies.',
-      imgSrc: '/img/circle-sm.png',
+      description: () => (
+        <p>
+          We provide customized dynamic support that evolves with your career.
+          We use current and emerging inclusive practices to communicate visual
+          information. This ranges from interpreting complex data to integrating
+          assistive technologies into an employee&apos;s workflow.
+        </p>
+      ),
+      imgSrc: '/img/about/lightbulb.png',
       imgAlt: '',
     },
   ]
@@ -53,28 +80,28 @@ function About() {
           </h1>
           <div className="mx-14 flex flex-col gap-6 lg:mx-0 lg:max-w-xl">
             <p className="body-copy text-white">
-              Building and Supporting Inclusive Work and Businesses
+              Building and Supporting Truly Inclusive Workplaces and Businesses
             </p>
             <p className="body-copy text-white">
               Accessibility solutions for blind and low-vision employees
             </p>
             <p className="body-copy text-white pb-28">
-              We work within your systems to deliver fast and secure help. Our
-              service helps your business raise productivity, performance, and
-              job satisfaction.
+              We support employees your way, using your technology and internal
+              systems. By providing remote and virtual services over your secure
+              video networks, for example, we keep services confidential and
+              secure
             </p>
           </div>
         </div>
         <img
-          src="/img/woman-working-with-friend.png"
-          alt="Woman working with friend"
-          className="absolute -bottom-[150px] right-0 h-[251px]"
+          src="/img/partner-translating@4x.png"
+          alt="A Partner translating matertial into an accessible format for an employee"
+          className="absolute -bottom-[150px] -right-[30px] h-[251px]"
         />
       </header>
       <main className="mt-32">
         <section className="mx-8 flex flex-col gap-[54px] lg:gap-[84px] lg:flex-row lg:flex-wrap lg:mb-36 xl:max-w-7xl lg:flex 2xl:mx-auto lg:items-center">
           {content.map(function (item, index) {
-            const desc = item.description.split('\n\n')
             return (
               <article
                 key={index}
@@ -84,13 +111,7 @@ function About() {
                   <img src={item.imgSrc} alt={item.imgAlt} />
                 </div>
                 <h2 className="subheading">{item.title}</h2>
-                {desc.map(function (item, index) {
-                  return (
-                    <p key={index} className="body-copy">
-                      {item}
-                    </p>
-                  )
-                })}
+                {item.description()}
               </article>
             )
           })}
@@ -119,7 +140,7 @@ function About() {
               2022. Nora oversees a portfolio that creates workplaces where all
               employees can do their best work. Prior to Northwest Center, she
               worked in Washington, DC. She focused on the nexus of disability
-              and employment in the public and private sectors.
+              and employment in public and private sectors.
             </p>
             <Link
               href="https://www.linkedin.com/in/nora-genster-76153692"

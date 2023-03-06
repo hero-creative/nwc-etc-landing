@@ -8,17 +8,19 @@ function ContactForm({ theme }) {
 
   const themeStyles = {
     light: {
+      checkbox: 'css-checkbox',
       formControl: 'form-control bg-white border-black',
+      notice: 'italic text-center',
       inputLabel: 'input-label',
       sendBtn:
-        'btn-lg hover:bg-gray-700 active:bg-gray-900 bg-theme-blue text-white mt-5 self-center border-none max-w-[134px]',
-      checkbox: 'css-checkbox',
+        'btn-lg hover:bg-gray-700 active:bg-gray-900 bg-theme-blue text-white mt-5 border-none max-w-[134px]',
     },
     dark: {
-      formControl: 'form-control',
-      inputLabel: 'input-label',
-      sendBtn: 'btn-lg mt-5 self-center border-none max-w-[134px]',
       checkbox: 'css-checkbox',
+      formControl: 'form-control',
+      notice: 'italic',
+      inputLabel: 'input-label',
+      sendBtn: 'btn-lg mt-5 border-none max-w-[134px]',
     },
   }
 
@@ -164,9 +166,7 @@ function ContactForm({ theme }) {
       className="mx-8 pb-[35px] flex flex-col gap-6 lg:w-full lg:max-w-lg"
       onSubmit={handleSubmit}
     >
-      <p className="mb-6 italic lg:text-center">
-        Fields with asterisk (*) are required
-      </p>
+      <p className={styles.notice}>Fields with asterisk (*) are required</p>
 
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="subject" value="[ETC] Form Submission" />
@@ -224,7 +224,7 @@ function ContactForm({ theme }) {
       </label>
       <fieldset className="text-lg flex flex-col gap-3 mb-2 mt-2">
         <legend className="font-bold pb-3">
-          I&apos;m interested in (click all that apply:)
+          I am interested in (click all that apply:)
         </legend>
         <div className="pl-4 flex flex-col gap-3">
           <input

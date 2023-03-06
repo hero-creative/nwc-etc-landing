@@ -7,7 +7,9 @@ function Success() {
         <title>Contact form Successfully Sent</title>
       </Head>
       <main className="w-full h-full px-8 mt-[74px] pb-[188px]">
-        <h1 className="heading">Thank you for connecting!</h1>
+        <h1 className="heading">
+          Thank You! We will respond soon via the email you provided.
+        </h1>
       </main>
     </>
   )
