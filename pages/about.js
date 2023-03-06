@@ -128,9 +128,21 @@ function About() {
             })}
           </section>
         </div>
+        <aside className="flex relative bg-[#F2DB64] pl-[89px] pr-6 py-[36px] mt-[47px] lg:pt-[78px] lg:pb-[57px]">
+          <p className="text-[22px] leading-[35px] lg:max-w-3xl lg:text-center lg:mx-auto">
+            We can help you create a truly inclusive workplace and business. Our
+            services empower employees to focus on their work, not workplace
+            barriers.
+          </p>
+          <img
+            src="/img/y-circle-sm.png"
+            alt=""
+            className="absolute left-0 lg:left-8 bottom-0"
+          />
+        </aside>
         <section
           aria-label="contact us form"
-          className="bg-theme-blue text-white pt-[38px] mt-[60px] lg:flex lg:flex-col lg:items-center"
+          className="bg-theme-blue text-white pt-[38px] lg:flex lg:flex-col lg:items-center"
         >
           <h2 className="subheading font-[600] leading-[30px] mb-[21px] mx-8 text-white">
             Contact Us
