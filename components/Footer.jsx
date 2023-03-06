@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function Footer() {
   return (
-    <footer className="flex flex-col font-[300] gap-[152px] leading-[24px] mt-auto justify-between bg-theme-blue text-white p-8">
+    <footer className="p-8 flex flex-col font-[300] gap-[152px] leading-[24px] mt-auto justify-between bg-theme-blue text-white lg:py-12 lg:pt-14">
       <div className="lg:flex lg:py-16lg:gap-[100px] lg:w-full lg:flex-row lg:mx-auto lg:max-w-7xl">
         <div className="w-full">
           <nav className="w-full">
