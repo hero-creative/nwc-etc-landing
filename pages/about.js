@@ -75,11 +75,11 @@ function About() {
       </Head>
       <header className="relative bg-theme-blue pt-[49px] overflow-x-clip lg:pt-[102px]">
         <div className="max-w-6xl lg:flex lg:justify-between lg:items-center xl:mx-auto ">
-          <div className="lg:flex lg:flex-col lg:items-start ">
-            <h1 className="heading inter text-white lg:text-left mx-8">
+          <div className="lg:flex lg:flex-col lg:items-start mx-8">
+            <h1 className="heading inter text-white lg:text-left mx-">
               Accessibility Partners Service
             </h1>
-            <div className="flex flex-col gap-5 mt-[22px] mx-8 lg:max-w-xl">
+            <div className="flex flex-col gap-5 mt-[22px] mx- lg:max-w-xl">
               <p className="text-[22px] leading-[33px] mb-[20px] text-white">
                 Building and Supporting Truly Inclusive Workplaces and
                 Businesses
@@ -106,7 +106,7 @@ function About() {
       </header>
       <main className="mt-32">
         <div className="max-w-6xl xl:mx-auto">
-          <section className="mx-8 flex flex-col gap-[54px] lg:gap-[84px] lg:flex-row lg:flex-wrap lg:mb-36 lg:flex 2xl:mx-auto lg:items-center">
+          <section className="mx-8 flex flex-col gap-[54px] lg:gap-[84px] lg:flex-row lg:flex-wrap lg:mb-36 lg:flex lg:items-center">
             {content.map(function (item, index, arr) {
               return (
                 <article
