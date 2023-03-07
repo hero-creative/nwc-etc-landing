@@ -56,7 +56,7 @@ function Navbar() {
         >
           <ul
             aria-label="site navigation"
-            className="divide-y divide-gray-400 md:divide-y-0 text-base md:flex md:justify-between gap-12"
+            className="divide-y divide-gray-300 md:divide-y-0 text-base md:flex md:justify-between gap-12"
           >
             <li className="">
               <Link href="/contact">
