@@ -11,11 +11,11 @@ function Navbar() {
   }
 
   return (
-    <>
+    <div className="bg-white">
       <nav
         title="Main Navigation"
         aria-label="Main Navigation"
-        className="bg-white flex flex-wrap items-center justify-between lg:max-w-7xl lg:mx-auto w-full p-8 xl:px-0"
+        className="bg-white flex flex-wrap items-center justify-between  lg:mx-auto w-full p-8 xl:px-0 lg:max-w-7xl"
       >
         <Link href="/">
           <a className="max-w-[129px] lg:max-w-[225px] ring-offset-2">
@@ -73,7 +73,7 @@ function Navbar() {
           </ul>
         </div>
       </nav>
-    </>
+    </div>
   )
 }
 

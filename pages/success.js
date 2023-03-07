@@ -13,7 +13,7 @@ function Success() {
           `}
         </style>
       </Head>
-      <main className="relative overflow-hidden w-full h-full pt-[54px] pb-[36px] bg-theme-blue">
+      <main className="relative overflow-hidden w-full h-full pt-[54px] pb-[36px] bg-theme-blue lg:max-w-6xl lg:mx-auto">
         <h1 className="heading text-white pb-14 px-8">
           Thank You! We will respond soon via the email you provided.
         </h1>
