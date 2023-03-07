@@ -55,7 +55,7 @@ export default function Home() {
                 Accessibility Partners Service
               </h3>
               <p className="body-copy mb-[26px] text-center">
-                We provide blind and low-vision employees with one-to-one
+                We provide blind and low-vision employees with customized
                 support in the workplace. Our services remove digital and
                 physical barriers to make meetings, events, data, and documents
                 more accessible for low-vision and blind employees. All
@@ -138,12 +138,12 @@ export default function Home() {
               <div className="flex-shrink-0 flex items-center justify-center">
                 <img src="/img/kirologo.png" width={82} alt="Kiro7 News Logo" />
               </div>
-              <Link
-                rel="noreferrer"
-                target="_blank"
-                href="https://www.kiro7.com/news/local/local-woman-shares-experiences-navigating-workforce-wheelchair-helps-others-understand-ableism/ALEB46BXVNGSVMKPKOX4RZX2BE/"
-              >
-                <a className="underline hover:no-underline">
+              <Link href="https://www.kiro7.com/news/local/local-woman-shares-experiences-navigating-workforce-wheelchair-helps-others-understand-ableism/ALEB46BXVNGSVMKPKOX4RZX2BE/">
+                <a
+                  className="underline hover:no-underline"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Local woman shares experiences navigating workforce in
                   wheelchair, helps others understand &apos;ableism&apos;
                   <span className="sr-only">(opens in a new tab)</span>
@@ -158,12 +158,12 @@ export default function Home() {
                   alt="USA Today Logo"
                 />
               </div>
-              <Link
-                href="https://www.usatoday.com/story/opinion/2022/11/22/american-job-market-needs-people-disabilities/8304760001/?https://opinion.usatoday.com"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <a className="underline hover:no-underline">
+              <Link href="https://www.usatoday.com/story/opinion/2022/11/22/american-job-market-needs-people-disabilities/8304760001/?https://opinion.usatoday.com">
+                <a
+                  className="underline hover:no-underline"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   A reality check on the American workforce: Time to invest in
                   people with disabilities
                   <span className="sr-only">(opens in a new tab)</span>
@@ -174,12 +174,12 @@ export default function Home() {
               <div className="flex-shrink-0 flex items-center justify-center">
                 <img src="/img/inclogo.png" width={67} alt="Inc. Logo" />
               </div>
-              <Link
-                href="https://www.inc.com/marcel-schwantes/5-ways-to-make-your-workplace-more-inclusive-for-what-is-now-largest-minority-population.html"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <a className="underline hover:no-underline">
+              <Link href="https://www.inc.com/marcel-schwantes/5-ways-to-make-your-workplace-more-inclusive-for-what-is-now-largest-minority-population.html">
+                <a
+                  className="underline hover:no-underline"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Want a More Inclusive Workplace? Great, but Don&apos;t
                   Overlook Disabled Individuals{' '}
                   <span className="sr-only">(opens in a new tab)</span>
@@ -194,12 +194,12 @@ export default function Home() {
                   alt="New York Times Logo"
                 />
               </div>
-              <Link
-                href="https://www.nytimes.com/2022/10/25/business/economy/labor-disabilities.html"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <a className="underline hover:no-underline">
+              <Link href="https://www.nytimes.com/2022/10/25/business/economy/labor-disabilities.html">
+                <a
+                  className="underline hover:no-underline"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   For Disabled Workers, a Tight Labor Market Opens New Doors
                   <span className="sr-only">(opens in a new tab)</span>
                 </a>
@@ -209,12 +209,12 @@ export default function Home() {
               <div className="flex-shrink-0 flex items-center justify-center">
                 <img src="/img/forbeslogo.png" width={103} alt="Forbes Logo" />
               </div>
-              <Link
-                href="https://www.forbes.com/sites/rodberger/2023/02/14/paving-the-way-for-diversity-in-americas-evolving-employment-market/?sh=55dfad2e5879"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <a className="underline hover:no-underline">
+              <Link href="https://www.forbes.com/sites/rodberger/2023/02/14/paving-the-way-for-diversity-in-americas-evolving-employment-market/?sh=55dfad2e5879">
+                <a
+                  className="underline hover:no-underline"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Paving The Way For Diversity In America’s Evolving Employment
                   Market
                   <span className="sr-only">(opens in a new tab)</span>

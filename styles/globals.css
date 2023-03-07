@@ -69,7 +69,7 @@ body {
   }
 
   .partner-image-mobile {
-    @apply -bottom-[170px] -right-[35px] h-[279px];
+    @apply -bottom-[170px] h-[279px];
     position: absolute;
   }
   .partner-image-desktop {

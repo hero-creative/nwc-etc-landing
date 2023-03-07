@@ -7,7 +7,7 @@ function Navbar() {
 
   function handleMenuClick(e) {
     e.preventDefault()
-    setIsMenuOpen(!isMenuOpen)
+    setIsMenuOpen((prev) => !prev)
   }
 
   return (

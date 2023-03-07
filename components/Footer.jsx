@@ -29,12 +29,10 @@ function Footer() {
             </ul>
           </nav>
           <div className="mt-[38px] flex gap-[10px]">
-            <Link
-              href="https://www.facebook.com/nwcenter"
-              rel="noreferer"
-              target="_blank"
-            >
+            <Link href="https://www.facebook.com/nwcenter">
               <a
+                rel="noreferer"
+                target="_blank"
                 className="inline-block"
                 title="Opens in a new window"
                 aria-label="Visit the NW Center facebook profile. Opens in a new window."
@@ -45,12 +43,10 @@ function Footer() {
                 />
               </a>
             </Link>
-            <Link
-              href="https://twitter.com/nwcenter"
-              rel="noreferer"
-              target="_blank"
-            >
+            <Link href="https://twitter.com/nwcenter">
               <a
+                rel="noreferer"
+                target="_blank"
                 className="inline-block"
                 title="Opens in a new window"
                 aria-label="Visit the NW Center Twitter profile. Opens in a new window."
@@ -61,12 +57,10 @@ function Footer() {
                 />
               </a>
             </Link>
-            <Link
-              href="https://www.linkedin.com/company/northwest-center"
-              rel="noreferer"
-              target="_blank"
-            >
+            <Link href="https://www.linkedin.com/company/northwest-center">
               <a
+                rel="noreferer"
+                target="_blank"
                 className="inline-block"
                 title="Opens in a new window"
                 aria-label="Visit the NW Center LinkedIn profile. Opens in a new window."
@@ -77,12 +71,10 @@ function Footer() {
                 />
               </a>
             </Link>
-            <Link
-              href="https://www.instagram.com/northwestcenter/"
-              rel="noreferer"
-              target="_blank"
-            >
+            <Link href="https://www.instagram.com/northwestcenter/">
               <a
+                rel="noreferer"
+                target="_blank"
                 className="inline-block"
                 title="Opens in a new window"
                 aria-label="Visit the NW Center instagram profile. Opens in a new window."

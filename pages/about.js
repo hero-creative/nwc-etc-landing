@@ -73,45 +73,44 @@ function About() {
       <Head>
         <title>Accessibility Partners Service</title>
       </Head>
-      <header className="relative bg-theme-blue pt-[49px] overflow-x-clip lg:pt-[102px]">
-        <div className="max-w-6xl lg:flex lg:justify-between lg:items-center xl:mx-auto ">
+      <header className="relative bg-theme-blue pt-[49px] overflow-x-clip lg:pt-10 lg:pb-[2px] mb-16">
+        <div className="max-w-6xl lg:flex lg:justify-between lg:items-center xl:mx-auto">
           <div className="lg:flex lg:flex-col lg:items-start mx-8">
             <h1 className="heading inter text-white lg:text-left mx-">
               Accessibility Partners Service
             </h1>
-            <div className="flex flex-col gap-5 mt-[22px] mx- lg:max-w-xl">
-              <p className="text-[22px] leading-[33px] mb-[20px] text-white">
+            <div className="flex flex-col gap-5 mt-[22px] lg:max-w-xl">
+              <p className="text-[22px] leading-[33px] mb-[142px] lg:mb-0 text-white">
                 Building and Supporting Truly Inclusive Workplaces and
-                Businesses
-              </p>
-              <p className="body-copy text-white">
-                Accessibility solutions for blind and low-vision employees
-              </p>
-              <p className="body-copy text-white pb-28">
-                We support employees your way, using your technology and
-                internal systems. By providing remote and virtual services over
-                your secure video networks, for example, we keep services
-                confidential and secure
+                Businesses. Offering Accessibility solutions for blind and
+                low-vision employees.
               </p>
             </div>
           </div>
-          <div className="partner-image-mobile lg:partner-image-desktop lg:top-[61px]">
-            <img
-              className="h-full"
-              src="/img/partner-translating@4x.png"
-              alt="A Partner translating matertial into an accessible format for an employee"
-            />
+          <div className="relative flex justify-center">
+            <div className="partner-image-mobile lg:partner-image-desktop lg:top-[100px]">
+              <img
+                className="h-full"
+                src="/img/partner-translating@4x.png"
+                alt="A Partner translating matertial into an accessible format for an employee"
+              />
+            </div>
           </div>
         </div>
       </header>
-      <main className="mt-32">
-        <div className="max-w-6xl xl:mx-auto">
+      <main className="mt-32 lg:mt-[94px]">
+        <p className="mx-8 mb-9 lg:mb-[67px] lg:mx-auto lg:max-w-[549px] body-copy lg:text-center">
+          We support employees your way, using your technology and internal
+          systems. By providing remote and virtual services over your secure
+          video networks, for example, we keep services confidential and secure.
+        </p>
+        <div className="max-w-5xl xl:mx-auto">
           <section className="mx-8 flex flex-col gap-[54px] lg:gap-[84px] lg:flex-row lg:flex-wrap lg:mb-36 lg:flex lg:items-center">
             {content.map(function (item, index, arr) {
               return (
                 <article
                   key={index}
-                  className="flex flex-col gap-[14px] lg:w-1/4 lg:self-start"
+                  className="flex flex-col gap-[14px] lg:w-[45.55%] lg:self-start"
                 >
                   <div>
                     <img src={item.imgSrc} alt={item.imgAlt} />
@@ -168,12 +167,10 @@ function About() {
               worked in Washington, DC. She focused on the nexus of disability
               and employment in public and private sectors.
             </p>
-            <Link
-              href="https://www.linkedin.com/in/nora-genster-76153692"
-              rel="noreferer"
-              target="_blank"
-            >
+            <Link href="https://www.linkedin.com/in/nora-genster-76153692">
               <a
+                rel="noreferer"
+                target="_blank"
                 title="Opens in a new window"
                 aria-label="Visit Nora Genster's LinkedIn profile. Opens in a new window."
               >
